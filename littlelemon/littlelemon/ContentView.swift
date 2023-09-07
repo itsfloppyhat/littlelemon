@@ -19,6 +19,18 @@ struct ContentView: View {
     }
 }
 
+struct JSONMenu: Codable {
+    let menu: [MenuItem]
+}
+
+
+struct MenuItem: Codable {
+    let name: String
+    let price: Float
+    let itemDescription: String
+    let image: String
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
